@@ -1,0 +1,113 @@
+.title-section{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.experience{
+    color: var(--color-primary);
+}
+.title{
+    color: var(--color-lightn);
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.sections{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4rem;
+    box-shadow: var(--shadow-1);
+
+}
+.sections li {
+    height: 80px;
+    width: 33.3%;
+    display: inherit;
+    background-color: var(--background-color);
+    align-items: center;
+    justify-content: center;
+    margin-inline:5px
+}
+.sections li span{
+    color: var(--color-lightn);
+}
+.sections li:hover, .active {
+box-shadow: var(--shadow-1);
+}
+.features-container{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.features-title{
+    color: var(--color-lightn);
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.progress-bar{
+    margin-top: 1rem;
+    position: relative;
+    
+}
+
+.progress-title{
+    color: var(--color-lightn);
+}
+.progress{
+    background-color: green;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.progress::before
+{
+    content: "";
+    height: 10px;
+    position: absolute;
+    left: 0;
+    background-color: red;
+    border-radius: 6px;
+    animation: width 2s ease-in-out forwards;
+}
+@keyframes width{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+.progress span{
+    position: absolute;
+    top: -4px;
+    background-color: green;
+    z-index: 1;
+    animation: width-value 2s ease-in-out forwards;
+}
+@keyframes width-value{
+0%{
+    left: 0;
+}
+100%{
+    left: calc(90% - 16px);
+}
+}
+
+.progress span::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height:8px;
+    left:50%;
+    bottom: -4px;
+    transform: translateX(-50%) rotate(45deg);
+    background-color: green;
+    z-index: -1;
+}
