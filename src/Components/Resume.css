@@ -32,18 +32,30 @@
     background-color: var(--background-color);
     align-items: center;
     justify-content: center;
-    margin-inline:5px
+    margin-inline:5px;
+
 }
 .sections li span{
     color: var(--color-lightn);
 }
-.sections li:hover, .active {
+.sections li:hover {
 box-shadow: var(--shadow-1);
+}
+.active{
+    box-shadow: var(--shadow-1);
+}
+.active span{
+    color: var(--color-primary) !important
 }
 .features-container{
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
+}
+.development-skills{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
 }
 .features-title{
     color: var(--color-lightn);
@@ -52,42 +64,56 @@ box-shadow: var(--shadow-1);
     margin-top: 1rem;
 }
 .progress-bar{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     position: relative;
-    
+    width: 45%; 
 }
 
 .progress-title{
     color: var(--color-lightn);
 }
 .progress{
-    background-color: green;
+    background-color: var(--color-lightn);
     height: 10px;
     border-radius: 5px;
     margin-top: 10px;
+    animation: width 2s ease-in-out forwards;
+    position: relative;
 }
-.progress::before
+ .progress-value
 {
     content: "";
     height: 10px;
     position: absolute;
     left: 0;
-    background-color: red;
+    background-color: var(--color-primary);
     border-radius: 6px;
-    animation: width 2s ease-in-out forwards;
-}
+    width: 80%;
+} 
 @keyframes width{
     0%{
         width: 0%;
     }
     100%{
-        width: 90%;
+        width: 100%;
+    }
+}
+@keyframes width-bar{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
     }
 }
 .progress span{
     position: absolute;
-    top: -4px;
-    background-color: green;
+    top: -35px;
+    border-radius: 6px;
+    font-size: 12px;
+    padding: 3px;
+    color:var(--color-lightn);
+    background-color:var(--color-primary);
     z-index: 1;
     animation: width-value 2s ease-in-out forwards;
 }
@@ -96,7 +122,7 @@ box-shadow: var(--shadow-1);
     left: 0;
 }
 100%{
-    left: calc(90% - 16px);
+    left: calc(100% - 16px);
 }
 }
 
@@ -108,6 +134,19 @@ box-shadow: var(--shadow-1);
     left:50%;
     bottom: -4px;
     transform: translateX(-50%) rotate(45deg);
-    background-color: green;
+    background-color: var(--color-primary);
     z-index: -1;
+}
+
+@media only screen and (max-width:800px)
+{
+    .development-skills{
+        flex-direction: column;
+    }
+    .progress-bar{
+        width: 95%;
+    }
+    .experience-card-container{
+        margin-left:0px
+    }
 }

@@ -1,0 +1,110 @@
+
+.job-experience{
+    color: var(--color-lightn);
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.experience-years{
+    color: var(--color-primary);
+}
+.experience-sub-container{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.experience-card{
+    padding: 2rem;
+    margin: 2rem;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow-1);
+    border-radius: 6px;
+    width: calc(100% - 4rem);
+
+}
+.company-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.job-title{
+    font-size: 25px;
+    color: var(--color-body);
+}
+.location{
+    color: var(--color-primary);
+}
+.duration{
+    color: var(--color-body);
+    font-size: 12px;
+}
+.content{
+    margin:1rem 0 0 1rem;
+    color: var(--color-body);
+}
+.content li span{
+    color: var(--color-body);
+}
+.experience-card:hover .duration, .experience-card:hover .content li span, 
+.experience-card:hover .content,.experience-card:hover .job-title, .experience-card:hover{
+    color: var(--color-lightn);
+}
+.experience-card-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-left: 2rem;
+}
+.line{
+    width: 2px;
+    background-color: var(--color-lightn);
+}
+
+.line span{
+    content: "";
+    position: absolute;
+    top: calc(50% - 13px);
+    height: 26px;
+    left:-13px;
+    width: 26px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    border: 6px solid var(--color-lightn);
+    z-index: 1;
+}
+
+.intern-ship{
+ color: var(--color-primary);
+}
+
+@media only screen and (max-width: 800px) {
+    /* .job-experience{
+        font-size: 20px;
+        width: 90%;
+    } */
+    .experience-card-container{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+
+    .experience-card{
+        padding: 2rem;
+        margin: 2rem;
+        background-color: var(--background-color);
+        box-shadow: var(--shadow-1);
+        border-radius: 6px;
+    }
+    .job-title{
+        font-size: 20px;
+        color: var(--color-body);
+    }
+    .company-name{
+    flex-direction: column;
+    justify-content:flex-start
+    }
+    .location{
+        margin-block: 1rem;
+        width: 100%;
+    }
+}

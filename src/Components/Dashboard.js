@@ -8,30 +8,50 @@ export default function Dashboard() {
     {
       window.open(link,"_blank")
     }
+    function onClickMenuDashboard()
+    {
+      const section = document.querySelector( '.dashboard' );
+      section && section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+      setShowMenu(pre=>!pre)
+    }
+    function onClickMenuResume()
+    {
+      const section = document.querySelector( '.resume' );
+      section && section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+      setShowMenu(pre=>!pre)
+    }
+    function onClickMenuOpenSource()
+    {
+      const section = document.querySelector( '.experience-sub-container' );
+      section && section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+      setShowMenu(pre=>!pre)
+    }
+
+    
   return (
     <div className="dashboard">
       <div className="header">
         <p>Portfolio</p>
-        {/* <ul className="options">
+         <ul className="options">
           <li>
-            <span>Dashboard</span>
-            <span>Resume</span>
-            <span>Open source</span>
+            <span onClick={onClickMenuDashboard}>Dashboard</span>
+            <span onClick={onClickMenuResume}>Resume</span>
+            <span onClick={onClickMenuOpenSource}>Open source</span>
           </li>
         </ul>
         {
         showMenu &&
         <ul className="options-mobile">
           <li>
-            <span>Dashboard</span>
-            <span>Resume</span>
-            <span>Open source</span>
+          <span onClick={onClickMenuDashboard}>Dashboard</span>
+            <span onClick={onClickMenuResume}>Resume</span>
+            <span onClick={onClickMenuOpenSource}>Open source</span>
           </li>
         </ul>
     }
      <img className="list" src={require("../images/list.png")} onClick={()=>{
             setShowMenu(pre=>!pre)
-        }}/> */}
+        }}/> 
       </div>
       <div className="details">
         <div>
