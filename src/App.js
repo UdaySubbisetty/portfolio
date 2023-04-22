@@ -24,7 +24,7 @@ function App() {
     <div className="container">
       <Dashboard/>
       <Resume/>
-      {/* {offset > 150 && <img onClick={scrollToTop} className="scroll-to-top" src={require('./images/arrow.png')} alt="" />} */}
+      {offset > 150 && <img onClick={scrollToTop} className="scroll-to-top" src={require('./images/arrow.png')} alt="" />}
     </div>
   );
 }
