@@ -20,7 +20,7 @@ const experienceData = [
   new Company(
     "Sr. SOFTWARE ENGINEER, TECH MAHINDRA",
     "Abu Dhabi",
-    "Feb 2022 - Present",
+    "Feb 2021 - Present",
     [
       "Designed and developed react web and cross-platform mobile applications using React,React Native and Redux",
       "Collaborated with a team of developers and designers to build and maintain the applications",
